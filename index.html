@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width" charset="UTF-8">
+<title>Farms & Forests</title>
+<script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+<script type="text/javascript" src="js/tabletop.js"></script>
+<link href="css/sightline-farms-forests-map.css" rel="stylesheet">
+
+<!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<!--BEGIN FLYOUT FOR 'ABOUT THIS MAP'-->
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<p>
+	<br><br><br>
+	</p>
+	<p class="navtitle">Farms & Forests</p>
+	
+	<p class="moreinfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus enim ac sapien auctor rhoncus. Vestibulum justo mauris, pretium at congue non, commodo ut justo. Vivamus vitae purus non mi porttitor feugiat. Nulla efficitur ipsum mi, non molestie mi dapibus ac. In vel rutrum dolor. Vestibulum ut porttitor risus. Pellentesque ultrices lacinia tellus elementum vestibulum. Integer metus erat, bibendum vel scelerisque in, bibendum et nisi. Quisque placerat, arcu vel consectetur iaculis, metus ipsum rutrum eros, sit amet scelerisque tellus arcu in erat. 
+	
+	<br><br>
+	
+	Donec vestibulum semper enim vitae finibus. Donec facilisis pharetra libero. Proin justo nulla, pulvinar vitae orci sit amet, fringilla mattis erat. Pellentesque pharetra fermentum diam eu maximus. Sed tincidunt, tortor et consectetur rutrum, nunc elit interdum massa, non feugiat purus diam a ex. Curabitur semper dignissim rhoncus. Cras eu eros finibus, volutpat enim ut, mollis mi. Cras id ex vitae quam facilisis efficitur ac nec ipsum. Duis condimentum purus tortor, vel rutrum nisl accumsan non. Suspendisse eget felis tincidunt orci hendrerit viverra. Sed ac enim vel metus consequat auctor non eu orci. Donec commodo euismod rutrum. Curabitur vehicula nec leo sit amet porta. Phasellus posuere tortor erat, ut consequat arcu sollicitudin eget. Cras sed turpis euismod, posuere arcu sit amet, vehicula sem. Suspendisse vestibulum efficitur tellus ut finibus.
+	
+	<br><br>
+	
+	Thank you to <a href="http://www.coregis.net/" target="_blank">CoreGIS</a> for their help producing this map.
+	
+	<br><br>
+	
+	<a href="https://www.sightline.org" target="_blank">Sightline Institute</a>
+	<br>
+    <a href="https://www.sightline.org/about/contact-us/" target="_blank">Contact</a>
+	
+	</p>
+  
+</div>
+
+<div id="main">
+
+<div id="about">
+  <span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; Farms & Forests</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<!--END FLYOUT FOR 'ABOUT THIS MAP'-->
+
+<script type="text/javascript" src="js/sightline-farms-forests.js"></script>
+
+<div id="map"></div>
+<div id="map"></div>
+
+<div class="logobox"><a href="https://www.sightline.org" target="_blank"><img src='images/sightline_logo.svg' height = 80></a></div>
+
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<!-- Use any element to open the sidenav
+<span onclick="openNav()">open</span> -->
+
+
+</body>
+<html>

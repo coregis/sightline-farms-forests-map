@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #29473d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s
+}
+
+p.title {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+	font-weight: bold;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #b1d4cb;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 28px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="https://coregis.github.io/alternative-voting/" target="_blank">Alternative Voting Systems</a>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum euismod pharetra. Suspendisse tempor scelerisque ipsum a aliquam. In sit amet iaculis est. Sed mauris erat, posuere id sapien in, facilisis blandit augue. 
+	
+	<br><br>
+	
+	Ut ut dolor bibendum, pellentesque sapien a, egestas orci. Sed ullamcorper nisl at arcu dignissim, nec suscipit ligula rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec turpis tincidunt, venenatis enim sed, lacinia turpis. Nam malesuada ipsum sed libero vulputate, ac semper lacus varius. Donec a tellus sem. Nam sed efficitur leo, ut imperdiet ex. Sed interdum consectetur viverra.
+	</p>
+  <a href="https://www.sightline.org" target="_blank">Sightline Institute</a>
+  <a href="https://www.sightline.org/about/contact-us/" target="_blank">Contact</a>
+</div>
+
+<div id="main">
+  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; About this map</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+     
+</body>
+</html> 
