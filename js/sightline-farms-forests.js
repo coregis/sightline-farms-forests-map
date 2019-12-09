@@ -35,7 +35,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
     var popupInfo = metadata(data[i]);
 
 	//type in your desired dimensions for the markers; the marker will always be square
-	var iconDim = 31;
+	var iconDim = 41;
 	category = data[i].category.toLowerCase();
 	marker.setIcon( L.icon({
 		iconUrl: "markers/" + data[i].markerfile,
@@ -119,9 +119,11 @@ function metadata(properties) {
   var info = "";
   for(var p=0; p<obj.length; p++) {
     var prop = obj[p];
-    if (prop != 'lat' &&
-        prop != 'lng' &&
+    if (prop != 'lng' &&
+        prop != 'lat' &&
 		prop != 'location_link' &&
+		prop != 'location_link' &&
+		prop != 'category' &&
         prop != 'markerfile' &&
 		properties[prop].length > 0) {
       //prop is the field name from the spreadsheet; properties is the geoJSON generated from one row of the spreadsheet

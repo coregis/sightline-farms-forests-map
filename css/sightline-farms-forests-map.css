@@ -21,7 +21,7 @@ p.title {
 }
 
 /*This is formatting for the second line in the popup */
-p.subcategory-display-new {
+p.kicker {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-style: normal;
@@ -32,7 +32,7 @@ p.subcategory-display-new {
 }
 
 /*This is formatting for the third line in the popup */
-p.dates-active {
+p.location {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-style: normal;
@@ -43,7 +43,7 @@ p.dates-active {
 }
 
 /*This is formatting for the fourth line in the popup */
-p.office {
+p.link {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	font-style: normal;
