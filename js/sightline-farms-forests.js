@@ -35,7 +35,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
     var popupInfo = metadata(data[i]);
 
 	//type in your desired dimensions for the markers; the marker will always be square
-	var iconDim = 41;
+	var iconDim = 42;
 	category = data[i].category.toLowerCase();
 	marker.setIcon( L.icon({
 		iconUrl: "markers/" + data[i].markerfile,
@@ -106,7 +106,7 @@ if (windowWidth < 400) {
 
   map.on('click', function(e) {
     var coords = document.getElementById('coords');
-    coords.innerHTML="<p>Lat: <strong>" + e.latlng.lat + "</strong>, Lng: <strong>" + e.latlng.lng+"</strong>";
+    coords.innerHTML="<p>lat: <strong>" + e.latlng.lat + "</strong>, lng: <strong>" + e.latlng.lng+"</strong>";
   });
 }
 
@@ -121,7 +121,6 @@ function metadata(properties) {
     var prop = obj[p];
     if (prop != 'lng' &&
         prop != 'lat' &&
-		prop != 'location_link' &&
 		prop != 'location_link' &&
 		prop != 'category' &&
         prop != 'markerfile' &&

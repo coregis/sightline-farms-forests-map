@@ -297,19 +297,15 @@ This and the following selector define subheadings.  In these:
 The number set as :nth-child(X) specifies which label to put the heading before.
 The text in the content property is the label text, in which \A denotes a line break.
 The white-space property is essential for the line breaks to be handled correctly.
-Everything else is normal CSS styling
-*/
+Everything else is normal CSS styling*/
+
 div.leaflet-control-layers-overlays label:nth-child(1)::before {
 	content: "Story Categories\A";
 	white-space: pre;
 	font-weight: bold;
 }
 
-div.leaflet-control-layers-overlays label:nth-child(4)::before {
-	content: "\AMulti-winner election systems\A";
-	white-space: pre;
-	font-weight: bold;
-}
+*/
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
