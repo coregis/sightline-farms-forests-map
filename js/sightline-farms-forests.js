@@ -31,32 +31,32 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
   var forest = L.featureGroup();
 
   for(var i=0;i<data.length;i++) {
-  	console.log(i, data, data[i]);
-    var marker = L.marker([parseFloat(data[i].lat), parseFloat(data[i].lng)]);
-    var popupInfo = metadata(data[i]);
+		console.log(i, data, data[i]);
+		var marker = L.marker([parseFloat(data[i].lat), parseFloat(data[i].lng)]);
+		var popupInfo = metadata(data[i]);
 
-	//type in your desired dimensions for the markers; the marker will always be square
-	var iconDim = 42;
-	category = data[i].category.toLowerCase();
-	marker.setIcon( L.icon({
-		iconUrl: "markers/" + data[i].markerfile,
-		iconSize: [iconDim, iconDim],
-		iconAnchor: [iconDim/2, iconDim*0.9],
-		popupAnchor: [0, 0]
-		/*shadowUrl: 'my-icon-shadow.png',
-		shadowSize: [68, 95],
-		shadowAnchor: [22, 94]*/
-	}));
-    marker.bindPopup(popupInfo,{'maxWidth':'350','maxHeight':'350','minWidth':'200'});
-    points.addLayer(marker);
-    console.log(marker, points);
-	if (category === "farm") {
-	   farm.addLayer(marker);
+		//type in your desired dimensions for the markers; the marker will always be square
+		var iconDim = 42;
+		category = data[i].category.toLowerCase();
+		marker.setIcon( L.icon({
+			iconUrl: "markers/" + data[i].markerfile,
+			iconSize: [iconDim, iconDim],
+			iconAnchor: [iconDim/2, iconDim*0.9],
+			popupAnchor: [0, 0]
+			/*shadowUrl: 'my-icon-shadow.png',
+			shadowSize: [68, 95],
+			shadowAnchor: [22, 94]*/
+		}));
+		marker.bindPopup(popupInfo,{'maxWidth':'350','maxHeight':'350','minWidth':'200'});
+		points.addLayer(marker);
+		console.log(marker, points);
+		if (category === "farm") {
+			farm.addLayer(marker);
+		}
+		else if (category === "forest") {
+			forest.addLayer(marker);
+		}
 	}
-	else if (category === "forest") {
-	   forest.addLayer(marker);
-	}
-}
 
 /* IMPORTANT!
 The subheadings in the legend are not controlled by anything in this file.
