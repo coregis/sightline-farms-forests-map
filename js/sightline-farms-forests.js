@@ -46,7 +46,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
 		shadowSize: [68, 95],
 		shadowAnchor: [22, 94]*/
 	}));
-    marker.bindPopup(popupInfo,{'maxWidth':'350','maxHeight':'350','minWidth':'200'});
+    marker.bindPopup(popupInfo,{'maxWidth':'300','maxHeight':'350','minWidth':'160'});
     points.addLayer(marker);
 	if (category === "farm") {
 	   farm.addLayer(marker);
@@ -121,7 +121,7 @@ function metadata(properties) {
     var prop = obj[p];
     if (prop != 'lng' &&
         prop != 'lat' &&
-		prop != 'location_link' &&
+		prop != 'locationlink' &&
 		prop != 'category' &&
         prop != 'markerfile' &&
 		properties[prop].length > 0) {

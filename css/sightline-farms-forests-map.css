@@ -13,7 +13,7 @@ body {
 /*This is formatting for the first line in the popup */
 p.title {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: bold;
@@ -23,7 +23,7 @@ p.title {
 /*This is formatting for the second line in the popup */
 p.kicker {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: bold;
@@ -34,10 +34,10 @@ p.kicker {
 /*This is formatting for the third line in the popup */
 p.location {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-style: normal;
+	font-size: 12px;
+	font-style: italic;
 	font-variant: normal;
-	font-weight: bold;
+	font-weight: normal;
 	margin-top: 0;
     margin-bottom: 0;
 }
@@ -45,10 +45,10 @@ p.location {
 /*This is formatting for the fourth line in the popup */
 p.link {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 p {
