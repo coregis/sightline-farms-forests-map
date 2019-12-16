@@ -32,24 +32,27 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
 
   for(var i=0;i<data.length;i++) {
 		console.log(i, data, data[i]);
-		var marker = L.marker([parseFloat(data[i].lat), parseFloat(data[i].lng)]);
 		var popupInfo = metadata(data[i]);
 
 		//type in your desired dimensions for the markers; the marker will always be square
 		var iconDim = 42;
-		category = data[i].category.toLowerCase();
-		marker.setIcon( L.icon({
-			iconUrl: "markers/" + data[i].markerfile,
-			iconSize: [iconDim, iconDim],
-			iconAnchor: [iconDim/2, iconDim*0.9],
-			popupAnchor: [0, 0]
-			/*shadowUrl: 'my-icon-shadow.png',
-			shadowSize: [68, 95],
-			shadowAnchor: [22, 94]*/
-		}));
-		marker.bindPopup(popupInfo,{'maxWidth':'350','maxHeight':'350','minWidth':'200'});
+		var marker = L.marker(
+			[parseFloat(data[i].lat), parseFloat(data[i].lng)],
+			{
+				icon: L.icon({
+					iconUrl: "markers/" + data[i].markerfile,
+					iconSize: [iconDim, iconDim],
+					iconAnchor: [iconDim/2, iconDim*0.9],
+					popupAnchor: [0, 0]
+				})
+			}
+		).bindPopup(
+			popupInfo,{'maxWidth':'350','maxHeight':'350','minWidth':'200'}
+		);
+
 		points.addLayer(marker);
 		console.log(marker, points);
+		category = data[i].category.toLowerCase();
 		if (category === "farm") {
 			farm.addLayer(marker);
 		}
@@ -79,18 +82,18 @@ For each of those, the number in () specifies which legend item they are putting
   var windowWidth = 0;
 
   if( typeof( window.innerWidth ) === 'number' ) {
-  windowWidth = window.innerWidth;
-} else if( document.documentElement && document.documentElement.clientWidth ) {
-  windowWidth = document.documentElement.clientWidth;
-} else if( document.body && document.body.clientWidth ) {
-  windowWidth = document.body.clientWidth;
-}
+		windowWidth = window.innerWidth;
+	} else if( document.documentElement && document.documentElement.clientWidth ) {
+		windowWidth = document.documentElement.clientWidth;
+	} else if( document.body && document.body.clientWidth ) {
+		windowWidth = document.body.clientWidth;
+	}
 
-if (windowWidth < 400) {
-  var collapseLegend = true;
-} else {
-  var collapseLegend = false;
-}
+	if (windowWidth < 400) {
+		var collapseLegend = true;
+	} else {
+		var collapseLegend = false;
+	}
 
 
 // This line adds layers to the _legend_
@@ -107,9 +110,14 @@ if (windowWidth < 400) {
   map.setView(map.getCenter());
 
   map.on('click', function(e) {
+  	console.log('click');
+  	console.log(e);
     var coords = document.getElementById('coords');
     coords.innerHTML="<p>lat: <strong>" + e.latlng.lat + "</strong>, lng: <strong>" + e.latlng.lng+"</strong>";
   });
+  console.log("click handler should be enabled");
+  console.log(map);
+  map.fire('click');
 }
 
 //add fields here that you do not want displayed in the popupInfo. Must be all lowercase
