@@ -31,6 +31,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
   var forest = L.featureGroup();
 
   for(var i=0;i<data.length;i++) {
+  	console.log(i, data, data[i]);
     var marker = L.marker([parseFloat(data[i].lat), parseFloat(data[i].lng)]);
     var popupInfo = metadata(data[i]);
 
@@ -48,6 +49,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
 	}));
     marker.bindPopup(popupInfo,{'maxWidth':'350','maxHeight':'350','minWidth':'200'});
     points.addLayer(marker);
+    console.log(marker, points);
 	if (category === "farm") {
 	   farm.addLayer(marker);
 	}
