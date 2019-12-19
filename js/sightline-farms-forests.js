@@ -46,7 +46,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
 		shadowSize: [68, 95],
 		shadowAnchor: [22, 94]*/
 	}));
-    marker.bindPopup(popupInfo,{'maxWidth':'300','maxHeight':'350','minWidth':'160'});
+    marker.bindPopup(popupInfo,{'maxWidth':'300','maxHeight':'350','minWidth':'160','autoPan':'true'});
     points.addLayer(marker);
 	if (category === "farm") {
 	   farm.addLayer(marker);
