@@ -300,7 +300,7 @@ The white-space property is essential for the line breaks to be handled correctl
 Everything else is normal CSS styling*/
 
 div.leaflet-control-layers-overlays label:nth-child(1)::before {
-	content: "Story Categories\A";
+	content: "Stories\A";
 	white-space: pre;
 	font-weight: bold;
 }
