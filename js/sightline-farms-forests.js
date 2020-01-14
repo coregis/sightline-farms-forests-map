@@ -20,12 +20,12 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
   var map = L.mapbox.map('map', 'mapbox.light').setView([0,0],1);
   map.zoomControl.setPosition('topright');
   map.options.minZoom = 5;
-  map.options.maxZoom = 14;
-  map.setMaxBounds([
+  map.options.maxZoom = 10;
+  /*map.setMaxBounds([
 	[24.766785, -176.132813], //southwest map coordinates
     [84.014496, -63.017578] //northeast map coordinates
 	])
-
+*/
 	
   var points = L.featureGroup();
   var farm = L.featureGroup();
@@ -101,7 +101,7 @@ if (windowWidth < 400) {
 
 
   var bounds = points.getBounds();
-  map.fitBounds(bounds, {padding:[10,10]});
+  map.fitBounds(bounds, {padding:[5,5]});
 
   map.setView(map.getCenter());
 
