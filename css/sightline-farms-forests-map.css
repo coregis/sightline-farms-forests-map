@@ -31,6 +31,17 @@ p.kicker {
     margin-bottom: 0;
 }
 
+/*This is formatting for the program link in the flyout */
+p.program  {
+  padding: 8px 8px 8px 32px;
+  background: #29473d;
+  color:#fff;
+  font-size:14px;
+  font-style: italic;
+  font-weight: bold;
+ /* width:auto !important;*/
+  }
+
 /*This is formatting for the third line in the popup */
 p.location {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -254,6 +265,15 @@ p.moreinfo  {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #b1d4cb;
+    transition: 0.3s
+}
+
+.program a {
+    /*padding: 8px 8px 8px 32px;*/
+    text-decoration: none;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #d87300;
     transition: 0.3s
 }
 
